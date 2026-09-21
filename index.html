@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Ti - Un Jardín Único</title>
+    <meta name="description" content="Un jardín animado que crece especialmente para ti.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Premium Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Top Header (Outside Canvas) -->
+    <header class="top-header">
+        <div class="header-content">
+            <h1 class="elegant-title">Algo hermoso está por <span class="highlight">florecer</span></h1>
+            <p class="elegant-subtitle">Feliz dia de las flores amarillas mi vavis.</p>
+        </div>
+    </header>
+
+    <!-- Canvas Container (Only Flowers) -->
+    <div id="hero-canvas-container">
+        <canvas id="garden-canvas"></canvas>
+        <a href="#mensajes" class="scroll-indicator">
+            <span>Descubrir</span>
+            <div class="arrow-down"></div>
+        </a>
+    </div>
+
+    <!-- Messages Section -->
+    <main class="content-overlay">
+        <section id="mensajes" class="messages-section">
+            <article class="message-block reveal-on-scroll">
+                <div class="message-content">
+                    <h2>Un instante hermoso</h2>
+                    <p class="custom-text">Espero te guste este breve detalle mi amor, </p>
+                </div>
+            </article>
+
+            <article class="message-block reveal-on-scroll reverse">
+                <div class="message-content">
+                    <h2>Como las flores</h2>
+                    <p class="custom-text">Hola mi pastelio de fresa, es un sencillo detalle, se que no te gustan las
+                        flores amarillas por eso hay solo flores color rosa.</p>
+                </div>
+            </article>
+
+            <article class="message-block reveal-on-scroll">
+                <div class="message-content">
+                    <h2>Para siempre</h2>
+                    <p class="custom-text">Teamo mucho mi fresita, me haces muy feliz</p>
+                </div>
+            </article>
+        </section>
+
+        <footer>
+            <p>Con mucho cariño 💖</p>
+        </footer>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+
+
+</html>
