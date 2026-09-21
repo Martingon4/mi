@@ -1,0 +1,54 @@
+:root {
+    /* Premium Dark Theme */
+    --bg-dark: #070509; /* Very deep purple/black */
+    --bg-gradient: radial-gradient(circle at 50% 50%, #150914 0%, #070509 100%);
+    
+    /* Romantic Pink Palette */
+    --pink-light: #ffd6e8;
+    --pink-primary: #ff8cbe;
+    --pink-accent: #e54b8b;
+    --pink-glow: rgba(255, 140, 190, 0.4);
+
+    /* Text Colors */
+    --text-main: #ffffff;
+    --text-muted: #b5aeb4;
+
+    /* Typography */
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'Montserrat', sans-serif;
+
+    /* Effects */
+    --glass-bg: rgba(25, 15, 22, 0.3);
+    --glass-border: rgba(255, 255, 255, 0.05);
+    --glass-shadow: 0 10px 40px rgba(0,0,0,0.5);
+
+    /* Spacing */
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 6rem;
+    --border-radius: 20px;
+    --transition-slow: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-fast: all 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-dark);
+    background-image: var(--bg-gradient);
+    color: var(--text-main);
+    min-height: 100vh;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+}
