@@ -1,0 +1,222 @@
+/* Base Styles */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Top Header (Outside Canvas) */
+.top-header {
+    width: 100%;
+    background-color: var(--bg-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-lg) 0;
+    text-align: center;
+}
+
+.header-content {
+    animation: fadeIn 2s ease-out;
+}
+
+/* Giant Hero Canvas Container */
+#hero-canvas-container {
+    position: relative;
+    width: 100vw;
+    height: 75vh;
+    overflow: hidden;
+    background: radial-gradient(circle at center, #150914 0%, #070509 100%);
+    border: 4px solid var(--pink-primary);
+    box-shadow: 0 0 40px var(--pink-glow);
+}
+
+#garden-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+
+
+.elegant-title {
+    font-size: 3.5rem;
+    /* Smaller than before to let canvas shine */
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-main);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+.elegant-title .highlight {
+    color: var(--pink-primary);
+    font-style: italic;
+    text-shadow: 0 0 20px var(--pink-glow);
+}
+
+.elegant-subtitle {
+    font-size: 1rem;
+    color: var(--text-muted);
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    opacity: 0.7;
+    animation: bounce 2s infinite ease-in-out;
+    cursor: pointer;
+    color: var(--pink-light);
+}
+
+.scroll-indicator span {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.arrow-down {
+    width: 16px;
+    height: 16px;
+    border-right: 2px solid var(--pink-light);
+    border-bottom: 2px solid var(--pink-light);
+    transform: rotate(45deg);
+}
+
+/* Base structural styles */
+.content-overlay {
+    position: relative;
+    z-index: 10;
+    background-color: var(--bg-dark);
+    /* Ensure background is solid behind messages */
+}
+
+/* Messages Section */
+.messages-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: var(--spacing-xl) var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: 15vh;
+}
+
+.message-block {
+    display: flex;
+    justify-content: flex-start;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: var(--transition-slow);
+}
+
+.message-block.reverse {
+    justify-content: flex-end;
+}
+
+.message-block.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.message-content {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg) var(--spacing-xl);
+    max-width: 600px;
+    box-shadow: var(--glass-shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.message-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--pink-primary), transparent);
+    opacity: 0.5;
+}
+
+.message-content h2 {
+    font-size: 3rem;
+    color: var(--pink-light);
+    margin-bottom: var(--spacing-md);
+    font-style: italic;
+}
+
+.custom-text {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: var(--spacing-xl);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .elegant-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-overlay-content {
+        padding: var(--spacing-md);
+        margin: 0 var(--spacing-md);
+    }
+
+    .message-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .message-content {
+        padding: var(--spacing-md);
+    }
+}
